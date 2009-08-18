@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test Page</title>
+    <link type="text/css" rel="stylesheet" href="/assets/dpSyntaxHighlighter.css">
+</head>
+<body class="yui-skin-sam">
+<h1><code>konami</code> special event for YUI 3</h1>
+<p>Inspired by <a href="http://webreflection.blogspot.com/2009/08/konami-code-as-dom-event.html">WebReflection</a> article, here's a little YUI 3 whimsy.</p>
+
+<p>If you're not familiar with the <a href="http://en.wikipedia.org/wiki/Konami_Code">Konami code</a>, you might not be a geek.</p>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/3.0.0b1/build/yui/yui.js"></script>
+<script type="text/javascript">
+YUI({
+    modules: {
+        konami: {
+            fullpath: 'konami.js',
+            requires: ['node']
+        }
+    }
+}).use('konami',function (Y) {
+
+Y.on('konami',function () { alert("God mode enabled"); }, document);
+
+});
+</script>
+<script type="text/javascript" src="/assets/dpSyntaxHighlighter.js" ></script>
+<script type="text/javascript" src="/assets/dpSyntaxHighlightExample.js"></script>
+</body>
+</html>

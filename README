@@ -1,0 +1,19 @@
+This YUI 3 module adds a new special event named 'konami'.  Based on the Konami code (http://en.wikipedia.org/wiki/Konami_Code), subscribers will be executed only once and should do something particularly awesome.  Think unicorns.
+
+Typically, you'll want to subscribe to this event on the document, but it can be attached to any element that receives keydown events.
+
+Y.on('konami', function (e) {
+    
+    MyApp._grantAllAccess(MyApp.getCurrentUser());
+
+}, document);
+
+or
+
+Y.get('#scrollableArea').on('konami', function (e) {
+    Y.later(3000, this, function (content) {
+        this.setContent(content);
+    }, this.get('innerHTML'));
+
+    this.setContent("<strong>You're awesome!  Now get back to work.</strong>");
+});
