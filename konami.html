@@ -14,12 +14,12 @@
 <script type="text/javascript">
 YUI({
     modules: {
-        konami: {
+        'event-konami': {
             fullpath: 'konami.js',
             requires: ['node']
         }
     }
-}).use('konami',function (Y) {
+}).use('event-konami',function (Y) {
 
 Y.on('konami',function () { alert("God mode enabled"); }, document);
 

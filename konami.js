@@ -4,6 +4,13 @@
  * fired only once for each subscriber.  With great power comes great
  * responsibility, after all.
  *
+ * @module event-konami
+ */
+YUI.add('event-konami', function (Y) {
+
+/**
+ * Provides a subscribable event named &quot;konami&quot;.
+ *
  * @event konami
  * @for YUI
  * @param type {String} 'konami'
@@ -14,8 +21,6 @@
  * to the listener.
  * @return {Event.Handle} the detach handle
  */
-YUI.add('konami', function (Y) {
-
 var progress = {},
     handlers = {},
     keys = [38,38,40,40,37,39,37,39,66,65],
